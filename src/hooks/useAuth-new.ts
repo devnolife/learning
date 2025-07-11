@@ -2,7 +2,6 @@
 
 import { useState, useEffect, createContext, useContext, ReactNode } from 'react'
 import { User } from '@/types/auth'
-import { getCurrentUser, signIn, signOut, signUp } from '@/lib/auth'
 
 interface AuthContextType {
   user: User | null
@@ -15,6 +14,32 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
+// Mock auth functions for now
+const mockAuth = {
+  getCurrentUser: async (): Promise<User | null> => {
+    // Mock implementation
+    return {
+      id: '1',
+      email: 'user@example.com',
+      name: 'Test User',
+      role: 'USER' as const,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    }
+  },
+  signIn: async (email: string, password: string): Promise<User | null> => {
+    console.log('Mock sign in:', email, password)
+    return mockAuth.getCurrentUser()
+  },
+  signUp: async (email: string, password: string, name: string): Promise<User | null> => {
+    console.log('Mock sign up:', email, password, name)
+    return mockAuth.getCurrentUser()
+  },
+  signOut: async (): Promise<void> => {
+    console.log('Mock sign out')
+  },
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
@@ -22,7 +47,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     async function loadUser() {
       try {
-        const currentUser = await getCurrentUser()
+        const currentUser = await mockAuth.getCurrentUser()
         setUser(currentUser)
       } catch (error) {
         console.error('Failed to load user:', error)
@@ -35,19 +60,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const handleSignIn = async (email: string, password: string) => {
-    const result = await signIn(email, password)
+    const result = await mockAuth.signIn(email, password)
     setUser(result)
     return result
   }
 
   const handleSignUp = async (email: string, password: string, name: string) => {
-    const result = await signUp(email, password, name)
+    const result = await mockAuth.signUp(email, password, name)
     setUser(result)
     return result
   }
 
   const handleSignOut = async () => {
-    await signOut()
+    await mockAuth.signOut()
     setUser(null)
   }
 

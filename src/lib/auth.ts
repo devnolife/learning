@@ -1,4 +1,50 @@
 import { User } from '@/types/auth'
+import jwt from 'jsonwebtoken'
+
+const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production'
+
+export interface TokenPayload {
+  userId: string
+  email: string
+  role: 'USER' | 'ADMIN'
+  iat?: number
+  exp?: number
+}
+
+export async function verifyToken(token: string): Promise<TokenPayload> {
+  try {
+    const payload = jwt.verify(token, JWT_SECRET) as TokenPayload
+    return payload
+  } catch (error) {
+    throw new Error('Invalid token')
+  }
+}
+
+export function generateToken(user: User): string {
+  const payload: TokenPayload = {
+    userId: user.id,
+    email: user.email,
+    role: user.role,
+  }
+
+  return jwt.sign(payload, JWT_SECRET, {
+    expiresIn: '7d', // Token expires in 7 days
+  })
+}
+
+export async function refreshToken(token: string): Promise<string> {
+  try {
+    const payload = await verifyToken(token)
+    // Generate new token with fresh expiration
+    return jwt.sign(
+      { userId: payload.userId, email: payload.email, role: payload.role },
+      JWT_SECRET,
+      { expiresIn: '7d' }
+    )
+  } catch (error) {
+    throw new Error('Invalid token for refresh')
+  }
+}
 
 // Mock authentication functions - replace with your auth provider
 export async function getCurrentUser(): Promise<User | null> {

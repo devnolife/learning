@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 import { AdminNav } from '@/components/admin/admin-nav'
 import { AdminSidebar } from '@/components/admin/admin-sidebar'
+import { AdminHeader } from '@/components/admin/admin-header'
+import { AdminProvider } from '@/components/admin/admin-provider'
 
 interface AdminLayoutProps {
   children: ReactNode
@@ -8,19 +10,18 @@ interface AdminLayoutProps {
 
 export default function AdminLayout({ children }: AdminLayoutProps) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200 px-6 py-4">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold text-gray-900">Admin Panel</h1>
-          <AdminNav />
+    <AdminProvider>
+      <div className="min-h-screen bg-slate-950 text-slate-50">
+        <AdminHeader />
+        <div className="flex h-[calc(100vh-4rem)]">
+          <AdminSidebar />
+          <main className="flex-1 overflow-auto">
+            <div className="p-6 space-y-6">
+              {children}
+            </div>
+          </main>
         </div>
-      </header>
-      <div className="flex">
-        <AdminSidebar />
-        <main className="flex-1 p-6">
-          {children}
-        </main>
       </div>
-    </div>
+    </AdminProvider>
   )
 }
