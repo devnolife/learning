@@ -1,0 +1,482 @@
+{
+  "combinedDashboard": {
+    "layout": "full-width",
+    "backgroundColor": "#f8f6f0",
+    "container": {
+      "maxWidth": "1400px",
+      "backgroundColor": "#ffffff",
+      "borderRadius": "24px",
+      "boxShadow": "0 10px 40px rgba(0,0,0,0.1)",
+      "overflow": "hidden"
+    },
+    "header": {
+      "type": "horizontal-navigation",
+      "backgroundColor": "#ffffff",
+      "padding": "16px 32px",
+      "borderBottom": "1px solid #f0f0f0",
+      "layout": "flex-between",
+      "components": {
+        "logo": {
+          "type": "logo-with-icon",
+          "icon": {
+            "shape": "rounded-rectangle",
+            "size": "40px",
+            "backgroundColor": "#ff6b9d",
+            "text": "E",
+            "color": "#ffffff",
+            "fontWeight": "bold"
+          },
+          "text": {
+            "content": "EduMaster",
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "color": "#2c3e50"
+          }
+        },
+        "navigation": {
+          "type": "horizontal-menu",
+          "items": [
+            {
+              "name": "Beranda",
+              "active": true,
+              "activeStyle": {
+                "backgroundColor": "#ff6b9d",
+                "color": "#ffffff"
+              }
+            },
+            {
+              "name": "Kursus",
+              "active": false
+            },
+            {
+              "name": "Jadwal",
+              "active": false
+            },
+            {
+              "name": "Arsip",
+              "active": false
+            },
+            {
+              "name": "Buku",
+              "active": false
+            }
+          ],
+          "itemStyle": {
+            "padding": "8px 16px",
+            "borderRadius": "8px",
+            "cursor": "pointer",
+            "transition": "all 0.3s ease"
+          }
+        },
+        "rightSection": {
+          "components": [
+            {
+              "type": "search-bar",
+              "placeholder": "Cari di sini...",
+              "width": "200px",
+              "padding": "8px 16px",
+              "borderRadius": "20px",
+              "border": "1px solid #e0e0e0"
+            },
+            {
+              "type": "user-profile",
+              "avatar": {
+                "size": "40px",
+                "backgroundColor": "#4a9b8e",
+                "initials": "CF",
+                "color": "#ffffff"
+              },
+              "notificationDot": {
+                "size": "12px",
+                "backgroundColor": "#ff6b9d",
+                "position": "top-right"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "mainContent": {
+      "layout": "two-column",
+      "padding": "32px",
+      "gap": "32px",
+      "columns": {
+        "leftSection": {
+          "flex": "1fr",
+          "components": [
+            {
+              "type": "welcome-section",
+              "layout": "flex-between",
+              "marginBottom": "16px",
+              "welcomeText": {
+                "title": {
+                  "text": "Selamat Pagi, Cecilia Funi ☁️",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "color": "#2c3e50"
+                },
+                "subtitle": {
+                  "text": "Platform Anda untuk Pembelajaran Tanpa Batas",
+                  "fontSize": "16px",
+                  "color": "#666666"
+                }
+              },
+              "ctaButton": {
+                "text": "Minta Demo",
+                "backgroundColor": "#2c3e50",
+                "color": "#ffffff",
+                "padding": "12px 24px",
+                "borderRadius": "25px",
+                "fontWeight": "600",
+                "hoverEffect": "translateY(-2px)"
+              }
+            },
+            {
+              "type": "stats-grid",
+              "gridTemplate": "2fr 1fr 1fr 1fr 1fr",
+              "gap": "16px",
+              "marginBottom": "24px",
+              "cards": [
+                {
+                  "type": "large-stat-card",
+                  "gridSpan": 2,
+                  "background": "linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%)",
+                  "color": "#ffffff",
+                  "title": "78%",
+                  "subtitle": "Rata-rata progres",
+                  "chart": {
+                    "type": "mini-bar-chart",
+                    "position": "bottom-right",
+                    "size": "120x60px",
+                    "bars": [
+                      {"height": "30%"},
+                      {"height": "60%"},
+                      {"height": "40%"},
+                      {"height": "80%"},
+                      {"height": "90%"}
+                    ],
+                    "barColor": "rgba(255,255,255,0.6)"
+                  }
+                },
+                {
+                  "type": "stat-card",
+                  "title": "40",
+                  "subtitle": "Total kursus",
+                  "backgroundColor": "#ffffff",
+                  "border": "1px solid #f0f0f0"
+                },
+                {
+                  "type": "stat-card",
+                  "title": "24",
+                  "subtitle": "Total tugas",
+                  "backgroundColor": "#ffffff",
+                  "border": "1px solid #f0f0f0"
+                },
+                {
+                  "type": "stat-card",
+                  "title": "8",
+                  "subtitle": "Total kuis",
+                  "backgroundColor": "#ffffff",
+                  "border": "1px solid #f0f0f0"
+                },
+                {
+                  "type": "stat-card",
+                  "title": "3.98",
+                  "subtitle": "IPK saat ini",
+                  "backgroundColor": "#ffffff",
+                  "border": "1px solid #f0f0f0"
+                }
+              ]
+            },
+            {
+              "type": "courses-section",
+              "backgroundColor": "#ffffff",
+              "padding": "24px",
+              "borderRadius": "16px",
+              "border": "1px solid #f0f0f0",
+              "header": {
+                "title": "Kursus aktif",
+                "seeAllLink": {
+                  "text": "Lihat Semua",
+                  "color": "#ff6b9d"
+                }
+              },
+              "coursesGrid": {
+                "gridTemplate": "repeat(auto-fit, minmax(250px, 1fr))",
+                "gap": "16px",
+                "courses": [
+                  {
+                    "title": "Desain UI: Dari Nol hingga Mahir",
+                    "lessons": "18 pelajaran",
+                    "duration": "2j 4m",
+                    "progress": 65,
+                    "borderLeft": "4px solid #4a9b8e"
+                  },
+                  {
+                    "title": "After Effects: Panduan Lengkap untuk Profesional",
+                    "lessons": "19 pelajaran",
+                    "duration": "2j 4m",
+                    "progress": 45,
+                    "borderLeft": "4px solid #4a9b8e"
+                  },
+                  {
+                    "title": "Master Desain Web",
+                    "lessons": "15 pelajaran",
+                    "duration": "1j 30m",
+                    "progress": 80,
+                    "borderLeft": "4px solid #4a9b8e"
+                  },
+                  {
+                    "title": "Dasar-dasar HTML",
+                    "lessons": "12 pelajaran",
+                    "duration": "1j 15m",
+                    "progress": 30,
+                    "borderLeft": "4px solid #4a9b8e"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "rightSection": {
+          "width": "300px",
+          "components": [
+            {
+              "type": "profile-card",
+              "backgroundColor": "#ffffff",
+              "padding": "24px",
+              "borderRadius": "16px",
+              "border": "1px solid #f0f0f0",
+              "textAlign": "center",
+              "avatar": {
+                "size": "80px",
+                "backgroundColor": "#4a9b8e",
+                "initials": "CF",
+                "fontSize": "24px",
+                "marginBottom": "16px"
+              },
+              "profileInfo": {
+                "name": "Cecilia Funi",
+                "username": "@cecilliafuni",
+                "details": [
+                  {
+                    "label": "Tahun:",
+                    "value": "Angkatan 2021"
+                  },
+                  {
+                    "label": "Jurusan:",
+                    "value": "Sistem Informasi"
+                  },
+                  {
+                    "label": "IPK:",
+                    "value": "3.98"
+                  }
+                ]
+              },
+              "editButton": {
+                "text": "Edit Profil",
+                "backgroundColor": "#007bff",
+                "color": "#ffffff",
+                "width": "100%",
+                "padding": "10px 20px",
+                "borderRadius": "8px"
+              }
+            },
+            {
+              "type": "calendar-widget",
+              "backgroundColor": "#ffffff",
+              "padding": "20px",
+              "borderRadius": "16px",
+              "border": "1px solid #f0f0f0",
+              "header": {
+                "title": "Mei 2024",
+                "navigation": {
+                  "prevButton": "←",
+                  "nextButton": "→"
+                }
+              },
+              "calendarGrid": {
+                "gridTemplate": "repeat(7, 1fr)",
+                "gap": "8px",
+                "days": ["Rab", "Kam", "Jum", "Sab", "Min", "Sen", "Sel"],
+                "dates": [
+                  {"date": "08", "isToday": false},
+                  {"date": "09", "isToday": false},
+                  {"date": "10", "isToday": true, "highlightColor": "#ff6b9d"},
+                  {"date": "11", "isToday": false},
+                  {"date": "12", "isToday": false},
+                  {"date": "13", "isToday": false},
+                  {"date": "14", "isToday": false}
+                ]
+              }
+            },
+            {
+              "type": "todo-list",
+              "backgroundColor": "#ffffff",
+              "padding": "20px",
+              "borderRadius": "16px",
+              "border": "1px solid #f0f0f0",
+              "title": "Daftar Tugas",
+              "items": [
+                {
+                  "id": 1,
+                  "text": "Tindak lanjut untuk Maskot",
+                  "completed": false,
+                  "checkbox": {
+                    "size": "20px",
+                    "borderColor": "#e0e0e0",
+                    "checkedColor": "#4a9b8e"
+                  }
+                },
+                {
+                  "id": 2,
+                  "text": "Selesaikan tugas Logo 😎",
+                  "completed": true,
+                  "checkbox": {
+                    "size": "20px",
+                    "borderColor": "#4a9b8e",
+                    "checkedColor": "#4a9b8e"
+                  }
+                },
+                {
+                  "id": 3,
+                  "text": "Cari tim untuk Desain Web",
+                  "completed": false,
+                  "checkbox": {
+                    "size": "20px",
+                    "borderColor": "#e0e0e0",
+                    "checkedColor": "#4a9b8e"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "interactions": {
+      "todoCheckboxes": {
+        "event": "click",
+        "action": "toggleCompleted",
+        "animation": "fade"
+      },
+      "progressBars": {
+        "event": "onLoad",
+        "action": "animateWidth",
+        "duration": "0.5s"
+      },
+      "cards": {
+        "event": "hover",
+        "action": "translateY(-4px)",
+        "duration": "0.3s"
+      },
+      "navItems": {
+        "event": "hover",
+        "action": "backgroundColorChange",
+        "hoverColor": "#f8f9fa"
+      }
+    },
+    "responsive": {
+      "breakpoints": {
+        "desktop": {
+          "minWidth": "1024px",
+          "mainContent": "grid-template-columns: 1fr 300px"
+        },
+        "tablet": {
+          "maxWidth": "1024px",
+          "mainContent": "grid-template-columns: 1fr",
+          "statsGrid": "grid-template-columns: 1fr 1fr"
+        },
+        "mobile": {
+          "maxWidth": "768px",
+          "navigation": "display: none",
+          "statsGrid": "grid-template-columns: 1fr"
+        }
+      }
+    },
+    "colorPalette": {
+      "primary": "#ff6b9d",
+      "secondary": "#4a9b8e",
+      "accent": "#007bff",
+      "success": "#28a745",
+      "warning": "#ffc107",
+      "background": "#f8f6f0",
+      "cardBackground": "#ffffff",
+      "text": "#2c3e50",
+      "textSecondary": "#666666",
+      "border": "#f0f0f0",
+      "hover": "#f8f9fa"
+    },
+    "typography": {
+      "fontFamily": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+      "headingXL": {
+        "fontSize": "32px",
+        "fontWeight": "700",
+        "lineHeight": "1.2"
+      },
+      "headingLarge": {
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "1.3"
+      },
+      "headingMedium": {
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "1.4"
+      },
+      "body": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "1.5"
+      },
+      "caption": {
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "lineHeight": "1.4"
+      },
+      "small": {
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "1.3"
+      }
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "20px",
+      "xxl": "24px",
+      "xxxl": "32px"
+    },
+    "borderRadius": {
+      "small": "8px",
+      "medium": "12px",
+      "large": "16px",
+      "xl": "20px",
+      "xxl": "24px",
+      "pill": "25px",
+      "circle": "50%"
+    },
+    "shadows": {
+      "small": "0 2px 4px rgba(0,0,0,0.1)",
+      "medium": "0 4px 15px rgba(0,0,0,0.1)",
+      "large": "0 8px 25px rgba(0,0,0,0.1)",
+      "xl": "0 10px 40px rgba(0,0,0,0.1)"
+    },
+    "animations": {
+      "hover": {
+        "duration": "0.3s",
+        "easing": "ease"
+      },
+      "progress": {
+        "duration": "0.5s",
+        "easing": "ease"
+      },
+      "fade": {
+        "duration": "0.2s",
+        "easing": "ease-in-out"
+      }
+    }
+  }
+}

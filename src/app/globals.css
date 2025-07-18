@@ -37,6 +37,24 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  /* Brand Colors */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-teal-light: var(--brand-teal-light);
+  --color-brand-teal-dark: var(--brand-teal-dark);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-warning: var(--brand-warning);
+  --color-brand-error: var(--brand-error);
+  --color-brand-success: var(--brand-success);
+  --color-brand-info: var(--brand-info);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-secondary-hover: var(--brand-secondary-hover);
+  --color-brand-teal-light-hover: var(--brand-teal-light-hover);
+  --color-brand-teal-dark-hover: var(--brand-teal-dark-hover);
+  --color-brand-purple-hover: var(--brand-purple-hover);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -71,72 +89,119 @@
     background-position: var(--bg-size, 300%) 0;}}}
 
 :root {
+  /* Learning Platform Custom Color Palette */
+  --brand-primary: #03346E;           /* Deep Blue - Main brand color */
+  --brand-secondary: #6EACDA;         /* Light Blue - Secondary actions */
+  --brand-teal-light: #78B9B5;        /* Mint Teal - Success states */
+  --brand-teal-dark: #0F828C;         /* Dark Teal - Interactive elements */
+  --brand-navy: #065084;              /* Navy Blue - Headers/Important text */
+  --brand-purple: #320A6B;            /* Deep Purple - Premium features */
+  --brand-dark: #021526;              /* Almost Black - Text/Backgrounds */
+  --brand-cream: #E2E2B6;             /* Light Cream - Soft backgrounds */
+  
+  /* Complementary Colors for Status */
+  --brand-warning: #FF8C42;           /* Orange for warnings */
+  --brand-error: #E74C3C;             /* Red for errors */
+  --brand-success: var(--brand-teal-light);
+  --brand-info: var(--brand-secondary);
+  
+  /* Hover State Colors (10% darker) */
+  --brand-primary-hover: #02294D;
+  --brand-secondary-hover: #5A8FB8;
+  --brand-teal-light-hover: #6CA19E;
+  --brand-teal-dark-hover: #0D6B73;
+  --brand-purple-hover: #280854;
+  
+  /* Standard Tailwind Variables Updated */
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: #FFFFFF;
+  --foreground: var(--brand-dark);
+  --card: #FFFFFF;
+  --card-foreground: var(--brand-dark);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--brand-dark);
+  --primary: var(--brand-primary);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--brand-secondary);
+  --secondary-foreground: var(--brand-dark);
+  --muted: var(--brand-cream);
+  --muted-foreground: var(--brand-navy);
+  --accent: var(--brand-teal-light);
+  --accent-foreground: var(--brand-dark);
+  --destructive: var(--brand-error);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--brand-cream);
+  --input: var(--brand-cream);
+  --ring: var(--brand-primary);
+  --success: var(--brand-success);
+  --success-foreground: #FFFFFF;
+  --warning: var(--brand-warning);
+  --warning-foreground: #FFFFFF;
+  --info: var(--brand-info);
+  --info-foreground: #FFFFFF;
+  
+  /* Chart Colors Using Brand Palette */
+  --chart-1: var(--brand-primary);
+  --chart-2: var(--brand-secondary);
+  --chart-3: var(--brand-teal-light);
+  --chart-4: var(--brand-purple);
+  --chart-5: var(--brand-navy);
+  
+  /* Sidebar Colors */
+  --sidebar: var(--brand-primary);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: var(--brand-secondary);
+  --sidebar-primary-foreground: var(--brand-dark);
+  --sidebar-accent: var(--brand-teal-light);
+  --sidebar-accent-foreground: var(--brand-dark);
+  --sidebar-border: var(--brand-navy);
+  --sidebar-ring: var(--brand-secondary);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Dark Mode using Brand Colors */
+  --background: var(--brand-dark);
+  --foreground: var(--brand-cream);
+  --card: #1a1a2e;
+  --card-foreground: var(--brand-cream);
+  --popover: #1a1a2e;
+  --popover-foreground: var(--brand-cream);
+  --primary: var(--brand-secondary);
+  --primary-foreground: var(--brand-dark);
+  --secondary: var(--brand-navy);
+  --secondary-foreground: var(--brand-cream);
+  --muted: #16213e;
+  --muted-foreground: #94a3b8;
+  --accent: var(--brand-teal-light);
+  --accent-foreground: var(--brand-dark);
+  --destructive: var(--brand-error);
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(110, 172, 218, 0.2);
+  --input: rgba(110, 172, 218, 0.15);
+  --ring: var(--brand-secondary);
+  --success: var(--brand-success);
+  --success-foreground: var(--brand-dark);
+  --warning: var(--brand-warning);
+  --warning-foreground: var(--brand-dark);
+  --info: var(--brand-info);
+  --info-foreground: var(--brand-dark);
+  
+  /* Dark Mode Chart Colors */
+  --chart-1: var(--brand-secondary);
+  --chart-2: var(--brand-teal-light);
+  --chart-3: var(--brand-cream);
+  --chart-4: var(--brand-purple);
+  --chart-5: var(--brand-navy);
+  
+  /* Dark Mode Sidebar Colors */
+  --sidebar: var(--brand-dark);
+  --sidebar-foreground: var(--brand-cream);
+  --sidebar-primary: var(--brand-secondary);
+  --sidebar-primary-foreground: var(--brand-dark);
+  --sidebar-accent: var(--brand-teal-light);
+  --sidebar-accent-foreground: var(--brand-dark);
+  --sidebar-border: rgba(110, 172, 218, 0.2);
+  --sidebar-ring: var(--brand-secondary);
 }
 
 @layer base {
@@ -147,3 +212,192 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* Code Editor Theme */
+@layer components {
+  .code-editor {
+    background-color: var(--brand-dark);
+    color: var(--brand-cream);
+  }
+  
+  .code-editor .token.keyword {
+    color: var(--brand-secondary);
+  }
+  
+  .code-editor .token.string {
+    color: var(--brand-teal-light);
+  }
+  
+  .code-editor .token.function {
+    color: #8B7CF6; /* Lightened purple */
+  }
+  
+  .code-editor .token.comment {
+    color: #7C8DB0; /* Lightened navy */
+  }
+  
+  .code-editor .token.selection {
+    background-color: rgba(3, 52, 110, 0.3);
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-brand-primary text-white hover:bg-brand-primary-hover transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-brand-secondary text-brand-dark hover:bg-brand-secondary-hover transition-colors;
+  }
+  
+  .btn-success {
+    @apply bg-brand-success text-white hover:bg-brand-teal-light-hover transition-colors;
+  }
+  
+  .btn-premium {
+    @apply bg-brand-purple text-white hover:bg-brand-purple-hover transition-colors;
+  }
+  
+  /* Card Styles */
+  .card-featured {
+    @apply bg-brand-cream border-brand-secondary;
+  }
+  
+  .card-premium {
+    background: linear-gradient(135deg, var(--brand-purple), var(--brand-primary));
+    @apply text-white;
+  }
+  
+  .card-admin {
+    @apply bg-brand-navy text-white;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    @apply bg-brand-cream;
+  }
+  
+  .progress-bar-fill {
+    @apply bg-brand-teal-light;
+  }
+  
+  /* Interactive Elements */
+  .link-interactive {
+    @apply text-brand-teal-dark hover:text-brand-primary transition-colors;
+  }
+  
+  /* Form Elements */
+  .form-input {
+    @apply border-brand-secondary focus:border-brand-primary focus:ring-brand-primary;
+  }
+  
+  /* Badges and Tags */
+  .badge-info {
+    @apply bg-brand-secondary text-brand-dark;
+  }
+  
+  .badge-success {
+    @apply bg-brand-success text-white;
+  }
+  
+  .tag-default {
+    @apply bg-brand-cream text-brand-navy;
+  }
+}
+
+/* Dashboard Design System Styles */
+
+/* Progress Bar Animation */
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+.animated-progress {
+  animation: progressAnimation 0.5s ease forwards;
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Button Hover Effects */
+.btn-hover {
+  transition: transform 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* Navigation Hover Effects */
+.nav-item {
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Todo Checkbox Animation */
+.todo-checkbox {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Mini Bar Chart Animation */
+@keyframes barGrow {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: var(--bar-height);
+  }
+}
+
+.animated-bar {
+  animation: barGrow 0.5s ease-out forwards;
+  animation-delay: var(--bar-delay);
+}
+
+/* Dashboard Color Variables */
+:root {
+  --dashboard-primary: #ff6b9d;
+  --dashboard-secondary: #4a9b8e;
+  --dashboard-accent: #007bff;
+  --dashboard-success: #28a745;
+  --dashboard-warning: #ffc107;
+  --dashboard-background: #f8f6f0;
+  --dashboard-card-background: #ffffff;
+  --dashboard-text: #2c3e50;
+  --dashboard-text-secondary: #666666;
+  --dashboard-border: #f0f0f0;
+  --dashboard-hover: #f8f9fa;
+}
+
