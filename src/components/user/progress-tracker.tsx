@@ -232,18 +232,18 @@ export function ProgressTracker() {
                 <div
                   key={achievement.id}
                   className={`p-4 rounded-lg border transition-colors ${achievement.unlocked
-                      ? 'bg-green-50 border-green-200'
-                      : 'bg-gray-50 border-gray-200'
+                    ? 'bg-green-50 border-green-200'
+                    : 'bg-gray-50 border-gray-200'
                     }`}
                 >
                   <div className="flex items-start space-x-3">
                     <div className={`h-10 w-10 rounded-lg flex items-center justify-center ${achievement.unlocked
-                        ? 'bg-green-100'
-                        : 'bg-gray-100'
+                      ? 'bg-green-100'
+                      : 'bg-gray-100'
                       }`}>
                       <Icon className={`h-5 w-5 ${achievement.unlocked
-                          ? 'text-green-600'
-                          : 'text-gray-400'
+                        ? 'text-green-600'
+                        : 'text-gray-400'
                         }`} />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -298,17 +298,18 @@ export function ProgressTracker() {
 
             {/* Calendar days - simplified representation */}
             {Array.from({ length: 21 }, (_, i) => {
-              const hasActivity = Math.random() > 0.3 // Random activity for demo
-              const intensity = hasActivity ? Math.floor(Math.random() * 4) + 1 : 0
+              // Use consistent pseudo-random values based on index to avoid hydration issues
+              const hasActivity = (i * 7 + 3) % 10 > 2 // Deterministic "random" activity for demo
+              const intensity = hasActivity ? ((i * 3 + 1) % 4) + 1 : 0
 
               return (
                 <div
                   key={i}
                   className={`aspect-square p-2 rounded text-xs flex items-center justify-center ${intensity === 0 ? 'bg-gray-100' :
-                      intensity === 1 ? 'bg-blue-100 text-blue-700' :
-                        intensity === 2 ? 'bg-blue-200 text-blue-800' :
-                          intensity === 3 ? 'bg-blue-300 text-blue-900' :
-                            'bg-blue-400 text-white'
+                    intensity === 1 ? 'bg-blue-100 text-blue-700' :
+                      intensity === 2 ? 'bg-blue-200 text-blue-800' :
+                        intensity === 3 ? 'bg-blue-300 text-blue-900' :
+                          'bg-blue-400 text-white'
                     }`}
                 >
                   {i + 1}
