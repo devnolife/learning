@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
-import { useRole } from '@/hooks/useRole'
 
 type Theme = 'light' | 'dark' | 'auto'
 
@@ -15,33 +14,37 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const { isAdmin } = useRole()
-  const [theme, setTheme] = useState<Theme>('auto')
+  const [theme, setTheme] = useState<Theme>('light') // Default to light
   const [effectiveTheme, setEffectiveTheme] = useState<'light' | 'dark'>('light')
+  const [mounted, setMounted] = useState(false)
+
+  // Ensure component is mounted before accessing localStorage
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
+    if (!mounted) return
+
     // Load theme preference from localStorage
     const savedTheme = localStorage.getItem('theme') as Theme
-    if (savedTheme) {
+    if (savedTheme && ['light', 'dark', 'auto'].includes(savedTheme)) {
       setTheme(savedTheme)
-    } else {
-      // Default theme based on role
-      const defaultTheme = isAdmin ? 'dark' : 'light'
-      setTheme(defaultTheme)
     }
-  }, [isAdmin])
+  }, [mounted])
 
   useEffect(() => {
+    if (!mounted) return
+
     // Determine effective theme
     let newEffectiveTheme: 'light' | 'dark' = 'light'
 
     if (theme === 'auto') {
-      // For admin users, default to dark; for regular users, default to light
-      newEffectiveTheme = isAdmin ? 'dark' : 'light'
-
-      // Also respect system preference
+      // Respect system preference
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         newEffectiveTheme = 'dark'
+      } else {
+        newEffectiveTheme = 'light'
       }
     } else {
       newEffectiveTheme = theme === 'dark' ? 'dark' : 'light'
@@ -56,7 +59,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     // Save to localStorage
     localStorage.setItem('theme', theme)
-  }, [theme, isAdmin])
+  }, [theme, mounted])
 
   const toggleTheme = () => {
     setTheme(prev => {
@@ -71,6 +74,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     effectiveTheme,
     setTheme,
     toggleTheme,
+  }
+
+  // Prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-background text-foreground">
+        {children}
+      </div>
+    )
   }
 
   return (

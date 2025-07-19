@@ -1,0 +1,1069 @@
+{
+  "landingPage": {
+    "layout": "full-width",
+    "backgroundColor": "#0a0a0a",
+    "theme": "dark-magic",
+    "sections": {
+      "header": {
+        "type": "navigation-header",
+        "backgroundColor": "rgba(10,10,10,0.95)",
+        "backdropFilter": "blur(15px)",
+        "padding": "20px 0",
+        "position": "fixed",
+        "zIndex": 1000,
+        "border": "1px solid rgba(147,51,234,0.3)",
+        "components": {
+          "logo": {
+            "type": "logo-with-icon",
+            "icon": "🧙‍♂️",
+            "text": "CodeWizard",
+            "fontSize": "28px",
+            "fontWeight": "bold",
+            "color": "#9333ea",
+            "textShadow": "0 0 10px rgba(147,51,234,0.5)"
+          },
+          "navigation": {
+            "type": "horizontal-menu",
+            "items": [
+              {
+                "name": "Beranda",
+                "active": true,
+                "href": "#home",
+                "activeColor": "#9333ea"
+              },
+              {
+                "name": "Kursus Magic",
+                "active": false,
+                "href": "#courses"
+              },
+              {
+                "name": "Grimoire",
+                "active": false,
+                "href": "#resources"
+              },
+              {
+                "name": "Akademi",
+                "active": false,
+                "href": "#academy"
+              },
+              {
+                "name": "Komunitas",
+                "active": false,
+                "href": "#community"
+              }
+            ],
+            "itemStyle": {
+              "color": "#e5e7eb",
+              "hoverColor": "#9333ea",
+              "transition": "all 0.3s ease"
+            }
+          },
+          "rightSection": {
+            "components": [
+              {
+                "type": "language-selector",
+                "icon": "🌐",
+                "text": "ID",
+                "backgroundColor": "rgba(147,51,234,0.1)",
+                "border": "1px solid rgba(147,51,234,0.3)"
+              },
+              {
+                "type": "cta-button",
+                "text": "Mulai Sihir",
+                "backgroundColor": "linear-gradient(45deg, #9333ea, #7c3aed)",
+                "color": "#ffffff",
+                "padding": "12px 24px",
+                "borderRadius": "25px",
+                "boxShadow": "0 0 20px rgba(147,51,234,0.4)"
+              }
+            ]
+          }
+        }
+      },
+      "hero": {
+        "type": "hero-section",
+        "backgroundColor": "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)",
+        "padding": "140px 0 100px",
+        "layout": "two-column",
+        "leftColumn": {
+          "content": {
+            "preHeadline": {
+              "text": "✨ Selamat Datang di Dunia Sihir Code",
+              "fontSize": "16px",
+              "color": "#9333ea",
+              "fontWeight": "600",
+              "marginBottom": "16px"
+            },
+            "headline": {
+              "text": "Menjadi Penyihir Code yang Mahir dalam JavaScript, Java, TypeScript & Bahasa Pemrograman Lainnya",
+              "fontSize": "52px",
+              "fontWeight": "bold",
+              "color": "#ffffff",
+              "lineHeight": "1.1",
+              "marginBottom": "24px",
+              "textShadow": "0 0 30px rgba(147,51,234,0.3)"
+            },
+            "subheadline": {
+              "text": "Kuasai mantra coding dari level pemula hingga wizard profesional. Pelajari JavaScript, Java, TypeScript, Python, dan bahasa pemrograman populer lainnya dengan pendekatan yang menyenangkan dan interaktif.",
+              "fontSize": "18px",
+              "color": "#d1d5db",
+              "lineHeight": "1.7",
+              "marginBottom": "40px"
+            },
+            "ctaButtons": [
+              {
+                "type": "primary-button",
+                "text": "🚀 Mulai Petualangan Coding",
+                "backgroundColor": "linear-gradient(45deg, #9333ea, #7c3aed)",
+                "color": "#ffffff",
+                "padding": "18px 36px",
+                "borderRadius": "30px",
+                "fontSize": "18px",
+                "fontWeight": "600",
+                "boxShadow": "0 0 25px rgba(147,51,234,0.5)",
+                "hoverEffect": "glow"
+              },
+              {
+                "type": "secondary-button",
+                "text": "📖 Lihat Grimoire",
+                "backgroundColor": "rgba(147,51,234,0.1)",
+                "color": "#9333ea",
+                "border": "2px solid rgba(147,51,234,0.3)",
+                "padding": "18px 36px",
+                "borderRadius": "30px",
+                "fontSize": "18px",
+                "fontWeight": "600",
+                "icon": "book-open"
+              }
+            ],
+            "magicElements": [
+              {
+                "type": "floating-code",
+                "code": "console.log('Hello, Wizard!');",
+                "language": "javascript",
+                "position": "top-left",
+                "animation": "float"
+              },
+              {
+                "type": "floating-code",
+                "code": "class Wizard { castSpell() {} }",
+                "language": "java",
+                "position": "bottom-right",
+                "animation": "pulse"
+              }
+            ]
+          }
+        },
+        "rightColumn": {
+          "wizardIllustration": {
+            "type": "animated-wizard",
+            "src": "wizard-coding.png",
+            "alt": "Penyihir Code sedang coding",
+            "animation": "levitate",
+            "effects": [
+              {
+                "type": "magic-particles",
+                "color": "#9333ea",
+                "count": 50
+              },
+              {
+                "type": "code-symbols",
+                "symbols": ["{ }", "< />", "=>", "&&", "||"],
+                "animation": "orbit"
+              }
+            ]
+          },
+          "decorativeElements": [
+            {
+              "type": "floating-shape",
+              "shape": "hexagon",
+              "color": "#9333ea",
+              "size": "80px",
+              "position": "top-right",
+              "animation": "rotate"
+            },
+            {
+              "type": "floating-shape",
+              "shape": "triangle",
+              "color": "#7c3aed",
+              "size": "60px",
+              "position": "middle-left",
+              "animation": "bounce"
+            }
+          ]
+        }
+      },
+      "stats": {
+        "type": "statistics-section",
+        "backgroundColor": "rgba(147,51,234,0.05)",
+        "padding": "80px 0",
+        "textAlign": "center",
+        "magicBorder": "1px solid rgba(147,51,234,0.2)",
+        "description": {
+          "text": "Bergabunglah dengan ribuan apprentice yang telah bertransformasi menjadi Code Wizard sejati dan menguasai berbagai mantra pemrograman.",
+          "fontSize": "18px",
+          "color": "#d1d5db",
+          "marginBottom": "50px"
+        },
+        "statsGrid": {
+          "layout": "four-column",
+          "items": [
+            {
+              "icon": "🧙‍♂️",
+              "number": "50+",
+              "label": "Master Wizard",
+              "description": "Instruktur berpengalaman"
+            },
+            {
+              "icon": "⚡",
+              "number": "25k+",
+              "label": "Active Wizards",
+              "description": "Siswa yang belajar"
+            },
+            {
+              "icon": "📚",
+              "number": "200+",
+              "label": "Spell Books",
+              "description": "Kursus coding tersedia"
+            },
+            {
+              "icon": "🏆",
+              "number": "95%",
+              "label": "Success Rate",
+              "description": "Tingkat keberhasilan"
+            }
+          ],
+          "itemStyle": {
+            "backgroundColor": "rgba(147,51,234,0.1)",
+            "border": "1px solid rgba(147,51,234,0.3)",
+            "borderRadius": "16px",
+            "padding": "30px 20px",
+            "fontSize": "36px",
+            "fontWeight": "bold",
+            "color": "#9333ea",
+            "boxShadow": "0 0 20px rgba(147,51,234,0.2)"
+          }
+        }
+      },
+      "courses": {
+        "type": "courses-section",
+        "backgroundColor": "#0a0a0a",
+        "padding": "100px 0",
+        "header": {
+          "title": "📜 Pilih Mantra Coding Anda",
+          "subtitle": "Kuasai bahasa pemrograman populer dengan pendekatan yang menyenangkan",
+          "alignment": "center",
+          "titleColor": "#ffffff",
+          "subtitleColor": "#d1d5db",
+          "actions": {
+            "viewAll": {
+              "text": "Lihat Semua Grimoire",
+              "color": "#9333ea",
+              "icon": "arrow-right"
+            }
+          }
+        },
+        "coursesGrid": {
+          "layout": "three-column",
+          "gap": "32px",
+          "courses": [
+            {
+              "id": 1,
+              "image": "javascript-wizard.jpg",
+              "title": "JavaScript Wizard: Dari Apprentice ke Master",
+              "description": "Kuasai mantra JavaScript modern, ES6+, DOM manipulation, dan async programming",
+              "instructor": "Gandalf the Dev",
+              "level": "Beginner to Advanced",
+              "rating": 4.9,
+              "reviews": 1234,
+              "price": "Rp 299.000",
+              "originalPrice": "Rp 599.000",
+              "duration": "40 jam",
+              "language": "JavaScript",
+              "languageIcon": "⚡",
+              "tag": "Terpopuler",
+              "tagColor": "#fbbf24",
+              "magicLevel": "🌟🌟🌟🌟🌟"
+            },
+            {
+              "id": 2,
+              "image": "java-sorcerer.jpg",
+              "title": "Java Sorcerer: OOP Magic & Spring Framework",
+              "description": "Pelajari Java OOP, Spring Boot, dan bangun aplikasi enterprise yang powerful",
+              "instructor": "Merlin JavaMaster",
+              "level": "Intermediate",
+              "rating": 4.8,
+              "reviews": 987,
+              "price": "Rp 349.000",
+              "originalPrice": "Rp 699.000",
+              "duration": "45 jam",
+              "language": "Java",
+              "languageIcon": "☕",
+              "tag": "Trending",
+              "tagColor": "#ef4444",
+              "magicLevel": "🌟🌟🌟🌟"
+            },
+            {
+              "id": 3,
+              "image": "typescript-enchanter.jpg",
+              "title": "TypeScript Enchanter: Type-Safe Magic",
+              "description": "Tingkatkan JavaScript skills dengan TypeScript untuk development yang lebih aman",
+              "instructor": "Hermione TypeScript",
+              "level": "Intermediate",
+              "rating": 4.9,
+              "reviews": 756,
+              "price": "Rp 279.000",
+              "originalPrice": "Rp 549.000",
+              "duration": "35 jam",
+              "language": "TypeScript",
+              "languageIcon": "🔷",
+              "tag": "Baru",
+              "tagColor": "#10b981",
+              "magicLevel": "🌟🌟🌟🌟"
+            },
+            {
+              "id": 4,
+              "image": "python-mystic.jpg",
+              "title": "Python Mystic: Data Science & AI Magic",
+              "description": "Eksplorasi Python untuk data science, machine learning, dan artificial intelligence",
+              "instructor": "Dumbledore DataWiz",
+              "level": "Beginner to Advanced",
+              "rating": 4.7,
+              "reviews": 2103,
+              "price": "Rp 399.000",
+              "originalPrice": "Rp 799.000",
+              "duration": "50 jam",
+              "language": "Python",
+              "languageIcon": "🐍",
+              "tag": "Hot",
+              "tagColor": "#f59e0b",
+              "magicLevel": "🌟🌟🌟🌟🌟"
+            },
+            {
+              "id": 5,
+              "image": "react-wizard.jpg",
+              "title": "React Wizard: Component Magic & Hooks",
+              "description": "Bangun aplikasi web modern dengan React, hooks, dan state management",
+              "instructor": "Saruman ReactMaster",
+              "level": "Intermediate",
+              "rating": 4.8,
+              "reviews": 1567,
+              "price": "Rp 329.000",
+              "originalPrice": "Rp 649.000",
+              "duration": "42 jam",
+              "language": "React",
+              "languageIcon": "⚛️",
+              "tag": "Favorit",
+              "tagColor": "#8b5cf6",
+              "magicLevel": "🌟🌟🌟🌟"
+            },
+            {
+              "id": 6,
+              "image": "fullstack-archmage.jpg",
+              "title": "Full Stack Archmage: Complete Web Magic",
+              "description": "Menjadi full stack developer dengan menguasai frontend, backend, dan database",
+              "instructor": "Radagast FullStack",
+              "level": "Advanced",
+              "rating": 4.9,
+              "reviews": 892,
+              "price": "Rp 499.000",
+              "originalPrice": "Rp 999.000",
+              "duration": "80 jam",
+              "language": "Multi-Language",
+              "languageIcon": "🌐",
+              "tag": "Ultimate",
+              "tagColor": "#dc2626",
+              "magicLevel": "🌟🌟🌟🌟🌟"
+            }
+          ],
+          "cardStyle": {
+            "backgroundColor": "rgba(147,51,234,0.1)",
+            "border": "1px solid rgba(147,51,234,0.3)",
+            "borderRadius": "20px",
+            "padding": "24px",
+            "boxShadow": "0 0 30px rgba(147,51,234,0.2)",
+            "hoverEffect": "levitate"
+          }
+        }
+      },
+      "pathways": {
+        "type": "learning-pathways",
+        "backgroundColor": "rgba(147,51,234,0.05)",
+        "padding": "100px 0",
+        "header": {
+          "title": "🗺️ Jalur Pembelajaran Wizard",
+          "subtitle": "Pilih jalur yang sesuai dengan tujuan coding Anda",
+          "textAlign": "center",
+          "marginBottom": "80px"
+        },
+        "pathwaysGrid": {
+          "layout": "three-column",
+          "gap": "32px",
+          "pathways": [
+            {
+              "id": 1,
+              "icon": "🌐",
+              "title": "Web Development Wizard",
+              "description": "Jalur lengkap untuk menjadi web developer profesional",
+              "skills": ["HTML/CSS", "JavaScript", "React/Vue", "Node.js", "MongoDB"],
+              "duration": "6 bulan",
+              "projects": "12 proyek",
+              "certificate": "Web Development Certificate",
+              "backgroundColor": "rgba(16,185,129,0.1)",
+              "borderColor": "#10b981"
+            },
+            {
+              "id": 2,
+              "icon": "📱",
+              "title": "Mobile App Sorcerer",
+              "description": "Kuasai pengembangan aplikasi mobile modern",
+              "skills": ["React Native", "Flutter", "Java/Kotlin", "Swift", "Firebase"],
+              "duration": "5 bulan",
+              "projects": "10 proyek",
+              "certificate": "Mobile Development Certificate",
+              "backgroundColor": "rgba(59,130,246,0.1)",
+              "borderColor": "#3b82f6"
+            },
+            {
+              "id": 3,
+              "icon": "🤖",
+              "title": "AI/ML Mystic",
+              "description": "Eksplorasi dunia artificial intelligence dan machine learning",
+              "skills": ["Python", "TensorFlow", "Pandas", "NumPy", "Scikit-learn"],
+              "duration": "8 bulan",
+              "projects": "15 proyek",
+              "certificate": "AI/ML Specialist Certificate",
+              "backgroundColor": "rgba(236,72,153,0.1)",
+              "borderColor": "#ec4899"
+            }
+          ]
+        }
+      },
+      "testimonial": {
+        "type": "testimonial-section",
+        "backgroundColor": "#0a0a0a",
+        "padding": "100px 0",
+        "layout": "two-column",
+        "leftColumn": {
+          "masterWizard": {
+            "image": "master-wizard.jpg",
+            "name": "Gandalf the Code",
+            "title": "Grand Master Wizard",
+            "experience": "15+ tahun",
+            "specialties": ["JavaScript", "Java", "Python", "React"],
+            "rating": 4.9,
+            "students": "10k+ Apprentices",
+            "magicAura": "rgba(147,51,234,0.3)"
+          }
+        },
+        "rightColumn": {
+          "content": {
+            "title": "Bergabunglah dengan Akademi CodeWizard & Wujudkan Impian Coding Anda",
+            "description": "Transformasi dari pemula menjadi coding wizard dalam hitungan bulan, bukan tahun. Dengan kurikulum yang telah terbukti, mentor berpengalaman, dan komunitas yang mendukung.",
+            "features": [
+              "🎯 Learning path yang terstruktur dan terarah",
+              "👥 Mentor 1-on-1 dari industry expert",
+              "💼 Portfolio projects yang impressive",
+              "🏆 Sertifikat yang diakui industri",
+              "🌟 Lifetime access ke semua materi",
+              "🤝 Komunitas wizard yang aktif dan supportif"
+            ],
+            "ctaButton": {
+              "text": "🔮 Mulai Transformasi Sekarang",
+              "backgroundColor": "linear-gradient(45deg, #9333ea, #7c3aed)",
+              "color": "#ffffff",
+              "padding": "18px 36px",
+              "borderRadius": "30px",
+              "boxShadow": "0 0 25px rgba(147,51,234,0.5)"
+            }
+          }
+        }
+      },
+      "community": {
+        "type": "community-section",
+        "backgroundColor": "rgba(147,51,234,0.05)",
+        "padding": "100px 0",
+        "header": {
+          "title": "🏰 Komunitas Wizard",
+          "subtitle": "Bergabung dengan ribuan coding wizard dari seluruh dunia",
+          "textAlign": "center",
+          "marginBottom": "80px"
+        },
+        "features": [
+          {
+            "icon": "💬",
+            "title": "Discord Community",
+            "description": "Chat real-time dengan sesama wizard, sharing knowledge, dan solve coding challenges bersama"
+          },
+          {
+            "icon": "🎮",
+            "title": "Coding Battles",
+            "description": "Kompetisi coding mingguan untuk mengasah skill dan menang hadiah menarik"
+          },
+          {
+            "icon": "📚",
+            "title": "Knowledge Sharing",
+            "description": "Berbagi tips, tricks, dan best practices dengan komunitas wizard lainnya"
+          },
+          {
+            "icon": "🎯",
+            "title": "Study Groups",
+            "description": "Belajar bersama dalam kelompok kecil dengan mentor yang berpengalaman"
+          }
+        ]
+      },
+      "faq": {
+        "type": "faq-section",
+        "backgroundColor": "#0a0a0a",
+        "padding": "100px 0",
+        "header": {
+          "title": "🤔 Frequently Asked Spells",
+          "description": "Temukan jawaban untuk pertanyaan yang sering ditanyakan oleh para apprentice",
+          "textAlign": "center",
+          "marginBottom": "80px"
+        },
+        "faqItems": [
+          {
+            "question": "Apakah saya perlu pengalaman programming sebelumnya?",
+            "answer": "Tidak sama sekali! Kami menyambut semua apprentice, dari yang belum pernah coding hingga yang sudah memiliki pengalaman. Setiap kursus dirancang dengan learning path yang jelas mulai dari level beginner.",
+            "expanded": true
+          },
+          {
+            "question": "Berapa lama waktu yang dibutuhkan untuk menjadi coding wizard?",
+            "answer": "Tergantung pada dedikasi dan waktu yang Anda investasikan. Rata-rata, dengan komitmen 2-3 jam per hari, Anda bisa menguasai satu bahasa pemrograman dalam 3-6 bulan. Untuk menjadi full-stack wizard, dibutuhkan sekitar 8-12 bulan.",
+            "expanded": false
+          },
+          {
+            "question": "Apakah saya akan mendapat sertifikat setelah menyelesaikan kursus?",
+            "answer": "Ya! Setiap kursus yang diselesaikan akan mendapatkan sertifikat digital yang diakui industri. Sertifikat ini bisa Anda gunakan untuk melamar pekerjaan atau meningkatkan profil LinkedIn Anda.",
+            "expanded": false
+          },
+          {
+            "question": "Bagaimana sistem mentoring di CodeWizard?",
+            "answer": "Kami menyediakan mentor 1-on-1 yang berpengalaman di industri. Anda bisa book session mentoring kapan saja, mendapat code review, dan guidance untuk career development. Semua mentor adalah wizard yang telah berpengalaman 5+ tahun.",
+            "expanded": false
+          },
+          {
+            "question": "Apakah ada job guarantee setelah lulus?",
+            "answer": "Kami memiliki program job placement assistance dimana kami membantu mencarikan peluang kerja melalui network partner companies. Meskipun tidak ada jaminan 100%, tingkat success rate alumni kami dalam mendapat pekerjaan adalah 85% dalam 6 bulan.",
+            "expanded": false
+          },
+          {
+            "question": "Bagaimana jika saya tidak puas dengan kursus yang dibeli?",
+            "answer": "Kami menawarkan 30-day money back guarantee untuk semua kursus. Jika dalam 30 hari pertama Anda merasa kursus tidak sesuai ekspektasi, Anda bisa request full refund tanpa pertanyaan.",
+            "expanded": false
+          }
+        ]
+      },
+      "contact": {
+        "type": "contact-section",
+        "backgroundColor": "rgba(147,51,234,0.05)",
+        "padding": "100px 0",
+        "header": {
+          "title": "🔮 Siap Memulai Perjalanan Wizard Anda?",
+          "description": "Hubungi kami atau bergabung dengan komunitas untuk memulai transformasi coding Anda",
+          "textAlign": "center",
+          "marginBottom": "80px"
+        },
+        "contactOptions": {
+          "layout": "two-column",
+          "leftColumn": {
+            "type": "contact-info",
+            "title": "📞 Bicara dengan Wizard Master",
+            "description": "Tim wizard master kami siap membantu Anda memilih learning path yang tepat",
+            "backgroundColor": "rgba(147,51,234,0.1)",
+            "border": "1px solid rgba(147,51,234,0.3)",
+            "padding": "50px",
+            "borderRadius": "20px",
+            "features": [
+              "✨ Free consultation 30 menit",
+              "🎯 Personalized learning roadmap",
+              "💡 Career guidance & tips",
+              "🤝 Akses ke komunitas eksklusif"
+            ],
+            "ctaButton": {
+              "text": "Book Free Consultation",
+              "backgroundColor": "linear-gradient(45deg, #9333ea, #7c3aed)",
+              "color": "#ffffff",
+              "padding": "15px 30px",
+              "borderRadius": "25px"
+            }
+          },
+          "rightColumn": {
+            "type": "newsletter",
+            "title": "📧 Magic Newsletter",
+            "description": "Dapatkan tips coding terbaru, update kursus, dan promo eksklusif langsung ke email Anda",
+            "backgroundColor": "linear-gradient(45deg, #9333ea, #7c3aed)",
+            "color": "#ffffff",
+            "padding": "50px",
+            "borderRadius": "20px",
+            "benefits": [
+              "🎁 Free coding challenges mingguan",
+              "📚 Akses ke exclusive resources",
+              "💰 Early bird discount untuk kursus baru",
+              "🏆 Tips dari master wizard"
+            ],
+            "form": {
+              "emailInput": {
+                "placeholder": "Masukkan email wizard Anda...",
+                "backgroundColor": "rgba(255,255,255,0.1)",
+                "border": "1px solid rgba(255,255,255,0.3)",
+                "color": "#ffffff",
+                "padding": "15px 20px",
+                "borderRadius": "10px"
+              },
+              "submitButton": {
+                "text": "Join Magic Newsletter",
+                "backgroundColor": "#ffffff",
+                "color": "#9333ea",
+                "padding": "15px 30px",
+                "borderRadius": "10px",
+                "fontWeight": "600"
+              }
+            }
+          }
+        }
+      }
+    },
+    "footer": {
+      "type": "footer-section",
+      "backgroundColor": "#0a0a0a",
+      "color": "#ffffff",
+      "padding": "80px 0 40px",
+      "border": "1px solid rgba(147,51,234,0.3)",
+      "layout": "multi-column",
+      "columns": {
+        "company": {
+          "logo": "🧙‍♂️ CodeWizard",
+          "description": "Platform pembelajaran coding terdepan yang mengubah apprentice menjadi coding wizard sejati. Kuasai JavaScript, Java, TypeScript, Python, dan bahasa pemrograman populer lainnya.",
+          "socialLinks": [
+            {
+              "platform": "Discord",
+              "icon": "💬",
+              "url": "#discord",
+              "color": "#7289da"
+            },
+            {
+              "platform": "GitHub",
+              "icon": "🐙",
+              "url": "#github",
+              "color": "#ffffff"
+            },
+            {
+              "platform": "YouTube",
+              "icon": "📺",
+              "url": "#youtube",
+              "color": "#ff0000"
+            },
+            {
+              "platform": "Twitter",
+              "icon": "🐦",
+              "url": "#twitter",
+              "color": "#1da1f2"
+            }
+          ]
+        },
+        "learning": {
+          "title": "🎓 Pembelajaran",
+          "links": [
+            {
+              "text": "JavaScript Wizard",
+              "url": "#javascript"
+            },
+            {
+              "text": "Java Sorcerer",
+              "url": "#java"
+            },
+            {
+              "text": "TypeScript Enchanter",
+              "url": "#typescript"
+            },
+            {
+              "text": "Python Mystic",
+              "url": "#python"
+            },
+            {
+              "text": "React Wizard",
+              "url": "#react"
+            },
+            {
+              "text": "Full Stack Path",
+              "url": "#fullstack"
+            }
+          ]
+        },
+        "community": {
+          "title": "🏰 Komunitas",
+          "links": [
+            {
+              "text": "Discord Community",
+              "url": "#discord"
+            },
+            {
+              "text": "Coding Battles",
+              "url": "#battles"
+            },
+            {
+              "text": "Study Groups",
+              "url": "#study-groups"
+            },
+            {
+              "text": "Success Stories",
+              "url": "#success"
+            },
+            {
+              "text": "Alumni Network",
+              "url": "#alumni"
+            }
+          ]
+        },
+        "support": {
+          "title": "🛠️ Dukungan",
+          "links": [
+            {
+              "text": "Help Center",
+              "url": "#help"
+            },
+            {
+              "text": "FAQ Spells",
+              "url": "#faq"
+            },
+            {
+              "text": "Contact Wizard",
+              "url": "#contact"
+            },
+            {
+              "text": "Technical Support",
+              "url": "#tech-support"
+            },
+            {
+              "text": "Career Guidance",
+              "url": "#career"
+            }
+          ]
+        }
+      },
+      "bottom": {
+        "copyright": "© 2024 CodeWizard Academy. Semua mantra coding dilindungi hak cipta.",
+        "magicElements": {
+          "title": "Powered by Magic:",
+          "elements": [
+            {
+              "name": "JavaScript",
+              "icon": "⚡"
+            },
+            {
+              "name": "Java",
+              "icon": "☕"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "🔷"
+            },
+            {
+              "name": "Python",
+              "icon": "🐍"
+            },
+            {
+              "name": "React",
+              "icon": "⚛️"
+            }
+          ]
+        }
+      }
+    },
+    "animations": {
+      "magicEffects": {
+        "particleSystem": {
+          "type": "floating-particles",
+          "color": "#9333ea",
+          "count": 100,
+          "speed": "slow",
+          "size": "small"
+        },
+        "codeRain": {
+          "type": "matrix-effect",
+          "characters": ["0", "1", "{", "}", "<", ">", "=", ";"],
+          "color": "rgba(147,51,234,0.3)",
+          "speed": "medium"
+        },
+        "glowEffects": {
+          "elements": [".wizard-card", ".cta-button", ".course-card"],
+          "color": "#9333ea",
+          "intensity": "medium"
+        }
+      },
+      "scrollReveal": {
+        "elements": [".hero", ".stats", ".courses", ".testimonial"],
+        "duration": "1s",
+        "easing": "ease-out",
+        "offset": "100px"
+      },
+      "hover": {
+        "courseCards": {
+          "transform": "translateY(-12px) scale(1.02)",
+          "boxShadow": "0 20px 40px rgba(147,51,234,0.3)",
+          "glowEffect": "0 0 30px rgba(147,51,234,0.5)"
+        },
+        "buttons": {
+          "transform": "translateY(-3px)",
+          "boxShadow": "0 8px 25px rgba(147,51,234,0.4)",
+          "glowIntensity": "increased"
+        },
+        "wizardElements": {
+          "levitate": "translateY(-5px)",
+          "rotate": "rotate(5deg)",
+          "glow": "0 0 20px rgba(147,51,234,0.6)"
+        }
+      },
+      "loading": {
+        "spellCasting": {
+          "duration": "2s",
+          "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+          "effect": "fade-in-up"
+        },
+        "magicCircle": {
+          "rotation": "360deg",
+          "duration": "3s",
+          "infinite": true
+        }
+      },
+      "interactive": {
+        "codeTyping": {
+          "speed": "human-like",
+          "cursor": "blinking",
+          "sound": "optional"
+        },
+        "spellCasting": {
+          "trigger": "click",
+          "effect": "particle-burst",
+          "sound": "magic-sfx"
+        }
+      }
+    },
+    "responsive": {
+      "breakpoints": {
+        "mobile": {
+          "maxWidth": "768px",
+          "hero": {
+            "layout": "single-column",
+            "textAlign": "center",
+            "headline": {
+              "fontSize": "36px"
+            },
+            "magicElements": "reduced"
+          },
+          "coursesGrid": {
+            "layout": "single-column"
+          },
+          "navigation": {
+            "type": "mobile-hamburger",
+            "magicBurger": true
+          },
+          "stats": {
+            "layout": "two-column"
+          }
+        },
+        "tablet": {
+          "maxWidth": "1024px",
+          "coursesGrid": {
+            "layout": "two-column"
+          },
+          "pathwaysGrid": {
+            "layout": "two-column"
+          },
+          "hero": {
+            "headline": {
+              "fontSize": "44px"
+            }
+          }
+        },
+        "desktop": {
+          "minWidth": "1024px",
+          "coursesGrid": {
+            "layout": "three-column"
+          },
+          "fullMagicEffects": true,
+          "parallaxScrolling": true
+        },
+        "largeDesktop": {
+          "minWidth": "1440px",
+          "enhancedAnimations": true,
+          "advancedParticles": true,
+          "fullScreenMagic": true
+        }
+      }
+    },
+    "colorPalette": {
+      "primary": "#9333ea",
+      "primaryLight": "#a855f7",
+      "primaryDark": "#7c3aed",
+      "secondary": "#1e293b",
+      "accent": "#06b6d4",
+      "magic": "#c084fc",
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "error": "#ef4444",
+      "background": "#0a0a0a",
+      "backgroundSecondary": "#1a1a2e",
+      "cardBackground": "rgba(147,51,234,0.1)",
+      "textPrimary": "#ffffff",
+      "textSecondary": "#d1d5db",
+      "textMuted": "#9ca3af",
+      "border": "rgba(147,51,234,0.3)",
+      "borderLight": "rgba(147,51,234,0.1)",
+      "glow": "rgba(147,51,234,0.5)"
+    },
+    "typography": {
+      "fontFamily": "'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif",
+      "magicFont": "'Fira Code', 'Cascadia Code', monospace",
+      "headingXXL": {
+        "fontSize": "52px",
+        "fontWeight": "bold",
+        "lineHeight": "1.1",
+        "letterSpacing": "-0.02em"
+      },
+      "headingXL": {
+        "fontSize": "40px",
+        "fontWeight": "bold",
+        "lineHeight": "1.2",
+        "letterSpacing": "-0.01em"
+      },
+      "headingLarge": {
+        "fontSize": "32px",
+        "fontWeight": "600",
+        "lineHeight": "1.3"
+      },
+      "headingMedium": {
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "1.4"
+      },
+      "body": {
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "1.7"
+      },
+      "bodySmall": {
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "1.6"
+      },
+      "caption": {
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "lineHeight": "1.5"
+      },
+      "code": {
+        "fontFamily": "'Fira Code', monospace",
+        "fontSize": "14px",
+        "backgroundColor": "rgba(147,51,234,0.1)",
+        "border": "1px solid rgba(147,51,234,0.3)",
+        "borderRadius": "6px",
+        "padding": "2px 6px"
+      }
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px",
+      "xxl": "32px",
+      "xxxl": "48px",
+      "xxxxl": "64px",
+      "xxxxxl": "80px"
+    },
+    "borderRadius": {
+      "small": "6px",
+      "medium": "10px",
+      "large": "16px",
+      "xl": "20px",
+      "xxl": "24px",
+      "pill": "50px",
+      "circle": "50%"
+    },
+    "shadows": {
+      "small": "0 2px 4px rgba(147,51,234,0.1)",
+      "medium": "0 4px 15px rgba(147,51,234,0.2)",
+      "large": "0 8px 25px rgba(147,51,234,0.3)",
+      "xl": "0 12px 35px rgba(147,51,234,0.4)",
+      "magic": "0 0 20px rgba(147,51,234,0.5)",
+      "magicStrong": "0 0 30px rgba(147,51,234,0.7)",
+      "glow": "0 0 40px rgba(147,51,234,0.6)"
+    },
+    "gradients": {
+      "primary": "linear-gradient(45deg, #9333ea, #7c3aed)",
+      "secondary": "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)",
+      "magic": "linear-gradient(90deg, #9333ea, #c084fc, #9333ea)",
+      "rainbow": "linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57)",
+      "dark": "linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%)"
+    },
+    "magicEffects": {
+      "spellCircle": {
+        "border": "2px solid #9333ea",
+        "borderRadius": "50%",
+        "animation": "rotate 3s linear infinite",
+        "boxShadow": "0 0 20px rgba(147,51,234,0.5)"
+      },
+      "floatingCode": {
+        "position": "absolute",
+        "animation": "float 3s ease-in-out infinite",
+        "opacity": "0.7",
+        "fontSize": "12px",
+        "fontFamily": "'Fira Code', monospace",
+        "color": "#9333ea"
+      },
+      "particleTrail": {
+        "background": "radial-gradient(circle, #9333ea 0%, transparent 70%)",
+        "animation": "trail 2s ease-out infinite"
+      },
+      "glitchText": {
+        "animation": "glitch 2s infinite",
+        "textShadow": "2px 0 0 #ff6b6b, -2px 0 0 #4ecdc4"
+      }
+    },
+    "interactivity": {
+      "mouseFollower": {
+        "enabled": true,
+        "type": "magic-cursor",
+        "trailColor": "#9333ea",
+        "trailLength": 10
+      },
+      "soundEffects": {
+        "enabled": "optional",
+        "hoverSound": "soft-chime",
+        "clickSound": "magic-pop",
+        "spellCast": "wizard-spell"
+      },
+      "keyboardShortcuts": {
+        "enabled": true,
+        "shortcuts": [
+          {
+            "key": "Ctrl+K",
+            "action": "search"
+          },
+          {
+            "key": "Escape",
+            "action": "close-modal"
+          }
+        ]
+      }
+    },
+    "performance": {
+      "lazyLoading": {
+        "images": true,
+        "animations": true,
+        "threshold": "0.1"
+      },
+      "optimization": {
+        "reducedMotion": "respect-user-preference",
+        "prefersColorScheme": "auto",
+        "fallbacks": {
+          "animations": "fade-only",
+          "gradients": "solid-colors"
+        }
+      }
+    }
+  }
+}

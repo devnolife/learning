@@ -55,6 +55,11 @@
   --color-brand-teal-light-hover: var(--brand-teal-light-hover);
   --color-brand-teal-dark-hover: var(--brand-teal-dark-hover);
   --color-brand-purple-hover: var(--brand-purple-hover);
+  /* Magic Colors */
+  --color-magic-primary: var(--magic-primary);
+  --color-magic-secondary: var(--magic-secondary);
+  --color-magic-accent: var(--magic-accent);
+  --color-magic-glow: var(--magic-glow);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -86,18 +91,43 @@
   --animate-gradient: gradient 8s linear infinite;
   @keyframes gradient {
   to {
-    background-position: var(--bg-size, 300%) 0;}}}
+    background-position: var(--bg-size, 300%) 0;}}
+  --animate-float: float 6s ease-in-out infinite;
+  @keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }}}
 
 :root {
-  /* Learning Platform Custom Color Palette */
-  --brand-primary: #03346E;           /* Deep Blue - Main brand color */
-  --brand-secondary: #6EACDA;         /* Light Blue - Secondary actions */
-  --brand-teal-light: #78B9B5;        /* Mint Teal - Success states */
-  --brand-teal-dark: #0F828C;         /* Dark Teal - Interactive elements */
-  --brand-navy: #065084;              /* Navy Blue - Headers/Important text */
-  --brand-purple: #320A6B;            /* Deep Purple - Premium features */
-  --brand-dark: #021526;              /* Almost Black - Text/Backgrounds */
-  --brand-cream: #E2E2B6;             /* Light Cream - Soft backgrounds */
+  --animate-float: float 6s ease-in-out infinite;
+  @keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    }
+  50% {
+    transform: translateY(-20px);
+    }
+  }}
+
+:root {
+  /* Learning Platform Custom Color Palette - Light Theme */
+  --brand-primary: #1a56db;           /* Bright Blue - Main brand color */
+  --brand-secondary: #3b82f6;         /* Blue - Secondary actions */
+  --brand-teal-light: #06b6d4;        /* Cyan - Success states */
+  --brand-teal-dark: #0891b2;         /* Dark Cyan - Interactive elements */
+  --brand-navy: #1e40af;              /* Blue 700 - Headers/Important text */
+  --brand-purple: #7c3aed;            /* Purple - Premium features */
+  --brand-dark: #1f2937;              /* Gray 800 - Text */
+  --brand-cream: #f8fafc;             /* Slate 50 - Soft backgrounds */
+  
+  /* Light Theme Magic Colors for CodeWizard */
+  --magic-primary: #8b5cf6;           /* Purple 500 - Main magic color */
+  --magic-secondary: #a855f7;         /* Purple 400 - Secondary magic */
+  --magic-accent: #ec4899;            /* Pink 500 - Accent magic */
+  --magic-glow: #ddd6fe;              /* Purple 200 - Glow effects */
   
   /* Complementary Colors for Status */
   --brand-warning: #FF8C42;           /* Orange for warnings */
